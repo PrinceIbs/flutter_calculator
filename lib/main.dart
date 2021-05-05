@@ -25,8 +25,9 @@ class Calculator extends StatelessWidget {
                   Container(
                     height: 90,
                     alignment: Alignment.centerRight,
+                    padding: EdgeInsets.only(right: 5),
                     child: Text(
-                      "5+3",
+                      "5+12",
                       textDirection: TextDirection.ltr,
                       style: TextStyle(
                         fontSize: 46,
@@ -37,145 +38,141 @@ class Calculator extends StatelessWidget {
                   Container(
                     alignment: Alignment.centerRight,
                     height: 70,
+                      padding: EdgeInsets.only(right: 5),
                       child: Text(
-                    "10",
+                    "17",
                     textDirection: TextDirection.ltr,
                         style: TextStyle(
-                          fontSize: 35
+                          fontSize: 35,
+                            fontWeight: FontWeight.w200,
                         ),
                     )
                   ),
                   Expanded(
                     child: Container(
-                        child:
-                        CustomScrollView(
-                          primary: false,
-                          slivers: <Widget>[
-                            SliverPadding(
+                        child: GridView.count(
+                            primary: false,
+                            crossAxisSpacing: .2,
+                            mainAxisSpacing: .2,
+                            crossAxisCount: 3,
+                            children: <Widget>[
+                              Container(
                                 padding: const EdgeInsets.all(5),
-                                sliver: SliverGrid.count(
-                                  crossAxisSpacing: 0,
-                                  mainAxisSpacing: 0,
-                                  crossAxisCount: 3,
-                                  children: <Widget>[
-                                    Container(
-                                        padding: const EdgeInsets.all(5),
-                                        alignment: Alignment.center,
-                                        color: Colors.black54,
-                                        child: const Text(
-                                          "9",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 26,
-                                            fontWeight: FontWeight.w300,
-                                          ),
-                                        ),
+                                alignment: Alignment.center,
+                                color: Colors.black54,
+                                child: const Text(
+                                  "9",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 26,
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                  padding: const EdgeInsets.all(5),
+                                  alignment: Alignment.center,
+                                  color: Colors.black54,
+                                  child: const Text(
+                                    "8",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 26,
+                                      fontWeight: FontWeight.w600,
                                     ),
-                                    Container(
-                                        padding: const EdgeInsets.all(5),
-                                        alignment: Alignment.center,
-                                        color: Colors.black54,
-                                        child: const Text(
-                                          "8",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 26,
-                                            fontWeight: FontWeight.w600,
-                                        ),
-                                      )
-                                    ),
-                                    Container(
-                                      padding: const EdgeInsets.all(5),
-                                      alignment: Alignment.center,
-                                      color: Colors.black54,
-                                      child: const Text(
-                                        "7",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 26,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      padding: const EdgeInsets.all(5),
-                                      alignment: Alignment.center,
-                                      color: Colors.black54,
-                                      child: const Text(
-                                        "6",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 26,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      padding: const EdgeInsets.all(5),
-                                      alignment: Alignment.center,
-                                      color: Colors.black54,
-                                      child: const Text(
-                                        "5",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 26,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),),
-                                    Container(
-                                      padding: const EdgeInsets.all(5),
-                                      alignment: Alignment.center,
-                                      color: Colors.black54,
-                                      child: const Text(
-                                        "4",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 26,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-                                    ),
-                                    Container( padding: const EdgeInsets.all(5),
-                                      alignment: Alignment.center,
-                                      color: Colors.black54,
-                                      child: const Text(
-                                        "3",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 26,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-                                    ),
-                                    Container( padding: const EdgeInsets.all(5),
-                                      alignment: Alignment.center,
-                                      color: Colors.black54,
-                                      child: const Text(
-                                        "2",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 26,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-                                    ),
-                                    Container( padding: const EdgeInsets.all(5),
-                                      alignment: Alignment.center,
-                                      color: Colors.black54,
-                                      child: const Text(
-                                        "1",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 26,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ))
-                      ],
-                    )),
-                  ),
+                                  )
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(5),
+                                alignment: Alignment.center,
+                                color: Colors.black54,
+                                child: const Text(
+                                  "7",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 26,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(5),
+                                alignment: Alignment.center,
+                                color: Colors.black54,
+                                child: const Text(
+                                  "6",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 26,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(5),
+                                alignment: Alignment.center,
+                                color: Colors.black54,
+                                child: const Text(
+                                  "5",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 26,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),),
+                              Container(
+                                padding: const EdgeInsets.all(5),
+                                alignment: Alignment.center,
+                                color: Colors.black54,
+                                child: const Text(
+                                  "4",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 26,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ),
+                              Container( padding: const EdgeInsets.all(5),
+                                alignment: Alignment.center,
+                                color: Colors.black54,
+                                child: const Text(
+                                  "3",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 26,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ),
+                              Container( padding: const EdgeInsets.all(5),
+                                alignment: Alignment.center,
+                                color: Colors.black54,
+                                child: const Text(
+                                  "2",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 26,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ),
+                              Container( padding: const EdgeInsets.all(5),
+                                alignment: Alignment.center,
+                                color: Colors.black54,
+                                child: const Text(
+                                  "1",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 26,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ),
+                            ]
+                        )
+                        )
+                        ),
             ]))));
   }
 }
